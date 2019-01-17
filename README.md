@@ -7,6 +7,10 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 - 主催者：odajun
 - 実施日時：2/23、2/24(予備日)：20時～24時頃を予定
 
+以下は8チームの場合の進行概要
+
+![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/rule.png)
+
 
 # ルールについて
 
