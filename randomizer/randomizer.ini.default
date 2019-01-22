@@ -1,7 +1,16 @@
-[channel_id]
+[voice_id]
 general = ***
-baitomin = ***
-fesmin = ***
+alpha = ***
+bravo = ***
+wait_room = ***
+
+[text_id]
+general = ***
+alpha = ***
+bravo = ***
 
 [access_token]
 token = ***
+
+[user_id]
+host = ***
