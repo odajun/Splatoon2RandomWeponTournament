@@ -25,21 +25,25 @@ def readFileToList(path):
 	return list
 
 def choiceUserWepon(wepon_set, user_wepon_list, num):
-    had_wepon = True
+    duplicated_wepon = True
     wepon = ""
-    while had_wepon :
+    while duplicated_wepon :
         wepon = random.choice(user_wepon_list)
-        had_wepon = False
+        duplicated_wepon = False
         for selected_wepon_line in wepon_set :
             if selected_wepon_line[num] == wepon :
-                had_wepon = True
+                duplicated_wepon = True
                 break
     return wepon
 
 def choiceTeamWepon(wepon_set, user_wepon_list):
     wepon_line = []
     for i in range(len(user_wepon_list)) :
-        wepon = choiceUserWepon(wepon_set, user_wepon_list[i], i)
+        duplicated_wepon = True
+        while duplicated_wepon :
+            wepon = choiceUserWepon(wepon_set, user_wepon_list[i], i)
+            if wepon not in wepon_line :
+                duplicated_wepon = False
         wepon_line.append(wepon)
     return wepon_line
 
@@ -78,11 +82,12 @@ def init_result():
     global result_set
     result_set = []
     rule_list = ["ナワバリ", "ガチエリア", "ガチアサリ", "ガチホコ", "ガチヤグラ"]
+    path = "./stage.txt"
+    stage_list = readFileToList(path)
     random.shuffle(rule_list)
     wepon_set = getWeponTypeList()
-    game_num = 5
-    alpha_wepon_type = random.sample(wepon_set, game_num)
-    bravo_wepon_type = random.sample(wepon_set, game_num)
+    alpha_wepon_type = getWeponTypeList()
+    bravo_wepon_type = getWeponTypeList()
 
     alpha_wepon_list = choiceWepon(alpha_wepon_type)
     bravo_wepon_list = choiceWepon(bravo_wepon_type)
@@ -90,6 +95,7 @@ def init_result():
     result_set.append(rule_list)
     result_set.append(alpha_wepon_list)
     result_set.append(bravo_wepon_list)
+    result_set.append(random.sample(stage_list,5))
     return
 
 def setAlphaMember(name):
@@ -124,20 +130,50 @@ def getBravoMembers():
     global bravo_member
     return bravo_member
 
+def is_unique(seq):
+    return len(seq) == len(set(seq))
 
+def weponCheck(wepon_set):
+    text = ""
+    for i in range(len(wepon_set)) :
+        text = text + str(i+1) + "ゲーム目の武器種の組み合わせ"
+        if is_unique(wepon_set[i]) :
+            text = text + "は重複なし\n"
+        else :
+            text = text + "に重複を確認\n"
+            text = text + ",".join(wepon_set[i]) + "\n"
+
+    user_wepon_set = [[],[],[],[]]
+    for i in range(len(wepon_set)) :
+        for j in range(len(user_wepon_set)) :
+            user_wepon_set[j].append(wepon_set[i][j])
+        
+    for i in range(len(user_wepon_set)) :
+        text = text + str(i+1) + "人目の武器種の組み合わせ"
+        if is_unique(user_wepon_set[i]): 
+            text = text + "は重複なし\n"
+        else :
+            text = text + "に重複を確認\n"
+            text = text + ",".join(user_wepon_set[i]) + "\n"
+
+    return text
+        
 client = discord.Client()
 alpha_member = []
 bravo_member = []
 result_set = []
 
 debug = False
-if debug == True :
+if debug :
     setAlphaMember("a")
     setBravoMember("b")
     init_result()
     pprint(setAlphaMember)
     pprint(setBravoMember)
     pprint(result_set)
+
+    print(weponCheck(result_set[1]))
+    print(weponCheck(result_set[2]))
     sys.exit()
     
 
@@ -159,6 +195,9 @@ async def on_message(message):
                 setAlphaMember(contents[1])
                 setBravoMember(contents[2])
                 init_result()
+                result_set = getResultSet()
+                print(weponCheck(result_set[1]))
+                print(weponCheck(result_set[2]))
                 reply = 'ランダマイザーの内容をリセットしました'
                 await client.send_message(message.channel, reply)
 
@@ -167,23 +206,30 @@ async def on_message(message):
             if message.author.id == config['user_id']['host'] :
                 game_num = int(message.content[0])
                 result_set = getResultSet()
-                rule_text = str(game_num) + "試合目のバトルルール : " + result_set[0][game_num - 1] + "\n"
-                await client.send_message(client.get_channel(config['text_id']['general']), rule_text)
-                announce_text = "ギア選択に移ってよければチームの通知部屋で ok とtype してください。\n"
-                alpha_text = rule_text + str(game_num) + "試合目のアルファチームの武器\n" + getOutputText(result_set[1][game_num - 1], getAlphaMembers()) + announce_text
+                delimiter = "xxx-------------------------------------xxx\n"
+                rule_text = str(game_num) + "試合目のバトルルール : 「" + result_set[0][game_num - 1] + "」\n"
+                stage_text = str(game_num) + "試合目のバトルステージ : 「" + result_set[3][game_num - 1] + "」\n"
+                header_text = delimiter + rule_text + stage_text + delimiter
+                await client.send_message(client.get_channel(config['text_id']['general']), header_text)
+                announce_text = delimiter + "ギア選択に移ってよければチームの通知部屋で ok とtype してください。\n"
+                announce_text = announce_text + "ワイルドカードを使用する場合は\n「xxx がワイルドカードを使用します」とtype してください。\n "
+                footer_text = announce_text + delimiter
+                alpha_text = header_text + str(game_num) + "試合目のアルファチームの武器\n\n" + getOutputText(result_set[1][game_num - 1], getAlphaMembers()) + footer_text
                 await client.send_message(client.get_channel(config['text_id']['alpha']), alpha_text)
-                bravo_text = rule_text + str(game_num) + "試合目のブラボーチームの武器\n" + getOutputText(result_set[2][game_num - 1], getBravoMembers()) + announce_text
+                bravo_text = header_text + str(game_num) + "試合目のブラボーチームの武器\n\n" + getOutputText(result_set[2][game_num - 1], getBravoMembers()) + footer_text
                 await client.send_message(client.get_channel(config['text_id']['bravo']), bravo_text)
 
     if message.content.startswith('ok') :
         if message.channel.id == config['text_id']['alpha'] or message.channel.id == config['text_id']['bravo'] :
-            text = "幸運を祈る(=_=)b"
-            await client.send_message(message.channel, text)
+            if message.author.id != client.user.id :
+                text = "幸運を祈る(=_=)b"
+                await client.send_message(message.channel, text)
 
     if 'ワイルドカード' in message.content :
         if message.channel.id == config['text_id']['alpha'] or message.channel.id == config['text_id']['bravo'] :
-            text = "一騎当千の活躍を期待する(=_=)b"
-            await client.send_message(message.channel, text)
+            if message.author.id != client.user.id :
+                text = "一騎当千の活躍を期待する(=_=)b"
+                await client.send_message(message.channel, text)
 
     if message.content.startswith('カモン') :
         if message.channel.id == config['text_id']['general'] :
@@ -192,7 +238,5 @@ async def on_message(message):
                 await client.send_message(client.get_channel(config['text_id']['alpha']), text)
                 await client.send_message(client.get_channel(config['text_id']['bravo']), text)
                 await client.send_message(message.channel, text)
-
-
 
 client.run(config['access_token']['token'])
