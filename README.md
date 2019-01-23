@@ -93,3 +93,62 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
   - DM による大会に関する連絡をするかもしれないのでフォローをお願いします
 - niconico動画：https://www.nicovideo.jp/user/8669540
 - Youtube：https://www.youtube.com/channel/UCCLyCW6NlUG2iPvmaoWq98g
+
+>
+> ここから下は大会ルールに無関係の内容となります。
+> 
+
+# How to use
+
+この Randomizer の使用方法について説明します。
+
+## 起動環境
+
+odajun の方で動作確認しているのは以下の環境です
+
+- MacOS High Sierra 10.13
+- python3 が使用できる環境
+- discord.py がインストールされている環境([参考](https://qiita.com/1ntegrale9/items/9d570ef8175cf178468f))
+
+## 起動までの準備
+
+1. discord でアルファチーム用、ブラボーチーム用のテキストチャンネルを作成する
+2. randomizer.ini.defualt を複製する形で randomizer.ini ファイルを作成します。
+3. randomizer.ini 中のアスタリスクの部分を、利用される discord 環境の各 id に入れ替える([参考](https://discordapp.com/developers/docs/intro))
+4. team ディレクトリ配下に「チーム名.txt」のファイルを作成し、メンバーの一覧を記入する
+5. コード中の debug の値が False となっていることを確認してください(True にするとプロンプトに出力されます)
+
+## 起動手順
+
+```
+cd Splatoon2RandomWeponTournament/randomizer/
+python3 randomizer.py 
+
+# 正常に起動できれば以下のように出力されます
+Logged in as
+RandomizerBot
+(**** id ****)
+------
+```
+
+## discord 上でのコマンド
+
+大会運用用に用意したものなので、利用される場合は自由にコード変更してもらえればと思います
+
+### general のテキストチャンネルで host(サーバ作成者)が実行できるもの
+
+- reset,(チーム1の名前),(チーム２の名前)
+  - ランダマイザーによる武器リストを初期化し、指定された名前のチームのファイルよりメンバーリストを読み込みます
+- 1st
+  - １試合目のルール、ステージ、武器リストを出力させます
+- 2nd
+  - 2試合目のルール、ステージ、武器リストを出力させます
+- 3rd
+  - 3試合目のルール、ステージ、武器リストを出力させます
+- 4th
+  - 4試合目のルール、ステージ、武器リストを出力させます
+- 5th
+  - 5試合目のルール、ステージ、武器リストを出力させます
+- カモン
+  - 「みなさん general のボイスチャンネルにお集まりください」というメッセージを出力させます
+  
