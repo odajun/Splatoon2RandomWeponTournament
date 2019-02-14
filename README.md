@@ -51,6 +51,10 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 (シューター2, マニューバー1, ブラスター1)
 ```
 
+#### 武器種
+以下のテーブルの内容で種類分けしています
+![sample_image2](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/weapon_types.png)
+
 ### 注意事項
 
 公平な条件で試合を続けることが困難、あるいは不快をあたえると運営側が判断した場合、不戦敗となる可能性がありますのでご注意ください
