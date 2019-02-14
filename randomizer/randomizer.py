@@ -49,7 +49,7 @@ def choiceTeamWepon(wepon_set, user_wepon_list):
 
 def getWeponTypeList():
     wepon_set = []
-    wepon_type_list = ["blaster", "charger", "manuver", "roller_brush", "shelter", "shooter", "slosher", "splatling"]
+    wepon_type_list = ["blaster", "charger", "manuver", "roller_brush", "shelter", "shooter", "shooter2", "slosher", "splatling"]
     user_wepon_list = []
     for i in range(4) :
         user_wepon_list.append(copy.deepcopy(wepon_type_list))
