@@ -163,7 +163,7 @@ alpha_member = []
 bravo_member = []
 result_set = []
 
-debug = True
+debug = False
 if debug :
     setAlphaMember("a")
     setBravoMember("b")
