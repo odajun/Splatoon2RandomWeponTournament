@@ -163,17 +163,27 @@ alpha_member = []
 bravo_member = []
 result_set = []
 
-debug = False
+debug = True
 if debug :
     setAlphaMember("a")
     setBravoMember("b")
     init_result()
-    pprint(setAlphaMember)
-    pprint(setBravoMember)
-    pprint(result_set)
+    #pprint(setAlphaMember)
+    #pprint(setBravoMember)
+    #pprint(result_set)
 
     print(weaponCheck(result_set[1]))
     print(weaponCheck(result_set[2]))
+
+    delimiter = "xxx-------------------------------------xxx\n"
+    for i in range(len(result_set[0])) :
+        rule_text = str(i+1) + "試合目のバトルルール : 「" + result_set[0][i] + "」\n"
+        stage_text = str(i+1) + "試合目のバトルステージ : 「" + result_set[3][i] + "」\n"
+        header_text = delimiter + rule_text + stage_text + delimiter
+        alpha_text = str(i+1) + "試合目のアルファチームの武器\n\n" + getOutputText(result_set[1][i], getAlphaMembers())
+        bravo_text = str(i+1) + "試合目のブラボーチームの武器\n\n" + getOutputText(result_set[2][i], getBravoMembers())
+        print(delimiter + rule_text + stage_text + delimiter + alpha_text + delimiter + bravo_text + delimiter)
+
     sys.exit()
     
 
