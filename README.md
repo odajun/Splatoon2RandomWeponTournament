@@ -24,7 +24,7 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 - 意気込みについては後日更新
 - メンバーやチーム名が変更される可能性があります
 
-![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams_init.png)
+![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams_2nd.png)
 
 
 # ルールについて
@@ -129,8 +129,8 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 # FAQ
 - Q. プレイヤーの方でも配信してもいいですか？
   - A. 配信しても良いですが、配信を通して作戦などが漏れる可能性もありますので、プライベート設定されることをおすすめいたします
-- Q. 参加表明したときのメンバーから変更したいのですがよいですか？
-  - A. メンバー変更可能です。ただし、大会開始後は変更できません
+- Q. 参加表明したときのメンバーや名前の変更はできますか？
+  - A. 変更可能です。ただし、大会開始後は変更できません
 - Q. 大会指定の Discord のサーバ以外で通話しても良いですか？(LINEなど)
   - A. 問題ありませんが、武器やルール、ステージの指示がこちらの指定した Discord の text channel より通知されるため、この text channel は見れる状態でお願いします
 
