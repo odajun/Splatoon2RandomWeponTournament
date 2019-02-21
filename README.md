@@ -1,3 +1,5 @@
+![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/randamubukitaikai.jpg)
+
 # Splatoon2RandomWeponTournament
 Splatoon2 ランダム武器大会に関する説明やランダマイザーのコード置き場
 
