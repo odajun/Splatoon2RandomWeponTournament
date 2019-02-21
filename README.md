@@ -19,6 +19,11 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/init_time_schedule.png)
 
+# トーナメント表
+https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tourament.png
+https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
+
+
 # 参加チームとメンバー
 
 - 意気込みについては後日更新
