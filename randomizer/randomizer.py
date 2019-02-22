@@ -102,11 +102,18 @@ def setAlphaMember(name):
     path = "./teams/" + name + ".txt"
     global alpha_member
     alpha_member = readFileToList(path)
+    global alpha_team_name
+    alpha_team_name = alpha_member[0]
+    alpha_member = alpha_member[1:]
+
 
 def setBravoMember(name):
     path = "./teams/" + name + ".txt"
     global bravo_member
     bravo_member = readFileToList(path)
+    global bravo_team_name
+    bravo_team_name = bravo_member[0]
+    bravo_member = bravo_member[1:]
 
 def setTeamMember(name):
     path = "./teams/" + name + ".txt"
@@ -163,10 +170,10 @@ alpha_member = []
 bravo_member = []
 result_set = []
 
-debug = False
+debug = True
 if debug :
-    setAlphaMember("a")
-    setBravoMember("b")
+    setAlphaMember("A")
+    setBravoMember("B")
     init_result()
     #pprint(setAlphaMember)
     #pprint(setBravoMember)
@@ -180,8 +187,8 @@ if debug :
         rule_text = str(i+1) + "試合目のバトルルール : 「" + result_set[0][i] + "」\n"
         stage_text = str(i+1) + "試合目のバトルステージ : 「" + result_set[3][i] + "」\n"
         header_text = delimiter + rule_text + stage_text + delimiter
-        alpha_text = str(i+1) + "試合目のアルファチームの武器\n\n" + getOutputText(result_set[1][i], getAlphaMembers())
-        bravo_text = str(i+1) + "試合目のブラボーチームの武器\n\n" + getOutputText(result_set[2][i], getBravoMembers())
+        alpha_text = str(i+1) + "試合目のチーム " + alpha_team_name + " の武器\n\n" + getOutputText(result_set[1][i], getAlphaMembers())
+        bravo_text = str(i+1) + "試合目のチーム " + bravo_team_name + " の武器\n\n" + getOutputText(result_set[2][i], getBravoMembers())
         print(delimiter + rule_text + stage_text + delimiter + alpha_text + delimiter + bravo_text + delimiter)
 
     sys.exit()
@@ -217,6 +224,7 @@ async def on_message(message):
                 game_num = int(message.content[0])
                 result_set = getResultSet()
                 delimiter = "xxx-------------------------------------xxx\n"
+                card_text = alpha_team_name + " vs " + bravo_team_name + "\n"
                 rule_text = str(game_num) + "試合目のバトルルール : 「" + result_set[0][game_num - 1] + "」\n"
                 stage_text = str(game_num) + "試合目のバトルステージ : 「" + result_set[3][game_num - 1] + "」\n"
                 header_text = delimiter + rule_text + stage_text + delimiter
@@ -224,9 +232,9 @@ async def on_message(message):
                 announce_text = delimiter + "ギア選択に移ってよければチームの通知部屋で ok とtype してください。\n"
                 announce_text = announce_text + "ワイルドカードを使用する場合は\n「xxx がワイルドカードを使用します」とtype してください。\n "
                 footer_text = announce_text + delimiter
-                alpha_text = header_text + str(game_num) + "試合目のアルファチームの武器\n\n" + getOutputText(result_set[1][game_num - 1], getAlphaMembers()) + footer_text
+                alpha_text = header_text + str(game_num) + "試合目のチーム「" + alpha_team_name + "」の武器\n\n" + getOutputText(result_set[1][game_num - 1], getAlphaMembers()) + footer_text
                 await client.send_message(client.get_channel(config['text_id']['alpha']), alpha_text)
-                bravo_text = header_text + str(game_num) + "試合目のブラボーチームの武器\n\n" + getOutputText(result_set[2][game_num - 1], getBravoMembers()) + footer_text
+                bravo_text = header_text + str(game_num) + "試合目のチーム「" + bravo_team_name + "」の武器\n\n" + getOutputText(result_set[2][game_num - 1], getBravoMembers()) + footer_text
                 await client.send_message(client.get_channel(config['text_id']['bravo']), bravo_text)
 
     if message.content.startswith('ok') :
