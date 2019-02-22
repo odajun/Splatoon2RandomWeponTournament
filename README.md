@@ -31,7 +31,7 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 - 意気込みについては後日更新
 - メンバーやチーム名が変更される可能性があります
 
-![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams_2nd.png)
+![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams.png)
 
 
 # ルールについて
