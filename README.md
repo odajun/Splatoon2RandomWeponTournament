@@ -7,7 +7,7 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 # 大会概要
 
 - 主催者：odajun
-- 実施日時：2/23、2/24(予備日)：20時～24時頃を予定
+- 実施日時：2/23：20時～24時頃を予定
 
 どんな武器を持つかは運次第
 
@@ -20,6 +20,13 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 当日の進行状況により前後しますのでご了承ください(対戦カードは後日更新します)
 
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/time_schedule.png)
+
+# 大会結果
+
+1位：すき家のラーメン
+2位：チーム名は大会の後で
+3位：CatEmperorTime
+4位：パンこるぽーりんドットコム
 
 # トーナメント表
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tourament.png)
