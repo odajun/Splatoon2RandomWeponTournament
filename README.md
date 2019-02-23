@@ -32,7 +32,7 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 4位：パンこるぽーりんドットコム
 
 # トーナメント表
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tourament.png)
+![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tournament.png)
 https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 
 
