@@ -19,7 +19,7 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 
 当日の進行状況により前後しますのでご了承ください(対戦カードは後日更新します)
 
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/init_time_schedule.png)
+![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/time_schedule.png)
 
 # トーナメント表
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tourament.png)
