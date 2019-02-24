@@ -35,6 +35,10 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tournament.png)
 https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 
+# 各バトルで選択された武器一覧
+![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/wepon_result.png)
+
+
 
 # 参加チームとメンバー
 
