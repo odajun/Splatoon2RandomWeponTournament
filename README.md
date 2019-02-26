@@ -47,6 +47,12 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 
 ![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams.png)
 
+# 大会配信アーカイブ
+[1回戦1試合～1回戦4試合](https://www.youtube.com/watch?v=UxyMZlE7DRs)
+
+[2回戦1試合～決勝戦](https://www.youtube.com/watch?v=_ia-QlQ6v6w)
+
+
 
 # ルールについて
 
