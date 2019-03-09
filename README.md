@@ -38,8 +38,6 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 # 各バトルで選択された武器一覧
 ![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/wepon_result.png)
 
-
-
 # 参加チームとメンバー
 
 - 意気込みについては後日更新
@@ -47,12 +45,25 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 
 ![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams.png)
 
-# 大会配信アーカイブ
+# 大会のハイライト動画
+
+## ニコニコ動画
+
+[前編](https://www.nicovideo.jp/watch/sm34750265)
+
+[後編](https://www.nicovideo.jp/watch/sm34750265)
+
+## Youtube
+
+[前編](https://www.youtube.com/watch?v=oZQfvf40sLo)
+
+[後編](https://www.youtube.com/watch?v=AbfhROvFPIk)
+
+# 大会配信アーカイブ(Youtube のみ)
+
 [1回戦1試合～1回戦4試合](https://www.youtube.com/watch?v=UxyMZlE7DRs)
 
 [2回戦1試合～決勝戦](https://www.youtube.com/watch?v=_ia-QlQ6v6w)
-
-
 
 # ルールについて
 
