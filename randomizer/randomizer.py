@@ -227,7 +227,7 @@ async def on_message(message):
                 card_text = alpha_team_name + " vs " + bravo_team_name + "\n"
                 rule_text = str(game_num) + "試合目のバトルルール : 「" + result_set[0][game_num - 1] + "」\n"
                 stage_text = str(game_num) + "試合目のバトルステージ : 「" + result_set[3][game_num - 1] + "」\n"
-                header_text = delimiter + rule_text + stage_text + delimiter
+                header_text = delimiter + card_text + rule_text + stage_text + delimiter
                 await client.send_message(client.get_channel(config['text_id']['general']), header_text)
                 announce_text = delimiter + "ギア選択に移ってよければチームの通知部屋で ok とtype してください。\n"
                 announce_text = announce_text + "ワイルドカードを使用する場合は\n「xxx がワイルドカードを使用します」とtype してください。\n "
