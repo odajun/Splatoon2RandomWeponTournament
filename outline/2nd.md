@@ -1,13 +1,11 @@
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/randamubukitaikai.jpg)
-
-# Splatoon2RandomWeponTournament
-Splatoon2 ランダム武器大会に関する説明やランダマイザーのコード置き場
+# 第2回 Splatoon2RandomWeponTournament
+第2回 Splatoon2 ランダム武器大会に関する説明やランダマイザーのコード置き場
 
 
 # 大会概要
 
 - 主催者：odajun
-- 実施日時：2/23：20時～24時頃を予定
+- 実施日時：8/17：19時～24時頃を予定
 
 どんな武器を持つかは運次第
 
@@ -17,53 +15,45 @@ Splatoon2 ランダム武器大会に関する説明やランダマイザーの�
 
 以下のスケジュールは目安となります
 
-当日の進行状況により前後しますのでご了承ください(対戦カードは後日更新します)
+当日の進行状況により前後しますのでご了承ください
 
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/time_schedule.png)
+(後日公開)
 
 # 大会結果
 
-1位：すき家のラーメン
+1位：-
 
-2位：チーム名は大会の後で
+2位：-
 
-3位：CatEmperorTime
+3位：-
 
-4位：パンこるぽーりんドットコム
+4位：-
 
 # トーナメント表
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/tournament.png)
-https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
+(後日更新)
 
 # 各バトルで選択された武器一覧
-![sample_image](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/wepon_result.png)
+(後日更新)
 
 # 参加チームとメンバー
 
-- 意気込みについては後日更新
 - メンバーやチーム名が変更される可能性があります
+(後日更新)
 
-![sample_image3](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/teams.png)
 
 # 大会のハイライト動画
 
 ## ニコニコ動画
 
-[前編](https://www.nicovideo.jp/watch/sm34750265)
-
-[後編](https://www.nicovideo.jp/watch/sm34750265)
+(後日更新)
 
 ## Youtube
 
-[前編](https://www.youtube.com/watch?v=oZQfvf40sLo)
-
-[後編](https://www.youtube.com/watch?v=AbfhROvFPIk)
+(後日更新)
 
 # 大会配信アーカイブ(Youtube のみ)
 
-[1回戦1試合～1回戦4試合](https://www.youtube.com/watch?v=UxyMZlE7DRs)
-
-[2回戦1試合～決勝戦](https://www.youtube.com/watch?v=_ia-QlQ6v6w)
+(後日更新)
 
 # ルールについて
 
@@ -76,6 +66,7 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
   - 2本目以降は前の試合のルールを外してランダムで選出
 - 試合のステージはランダムで選出
   - 2本目以降は前の試合のエリアを外してランダムで選出
+  - チームごとに戦いたくないステージを1ステージ指定でき、ランダムの候補から外して選出する
 - 追加ギアパワーの制限はしない
 
 ## 武器について
@@ -83,7 +74,6 @@ https://the-tournament.jp/tournaments/RC2L2MVulEEbCyJUDP60
 - 使用する武器は odajun の方で用意するランダマイザーより指定されたものを使用する
 - 武器は１バトルごとに変更される
 - 武器の決定はギアの選択の直前に通知され、バトル開始まで相手の使用する武器は不明な状態とする
-- 1試合中1チームで1度だけ、1名が好きな武器を使用できる(ワイルドカード)
 
 ### odajun の方で用意するランダマイザーの仕様について
 
@@ -102,7 +92,7 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 
 #### 武器種
 以下のテーブルの内容で種類分けしています
-![sample_image2](https://github.com/odajun/Splatoon2RandomWeponTournament/blob/master/weapon_types.png)
+(後日更新)
 
 ### 注意事項
 
@@ -120,7 +110,7 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 ## 参加条件
 
 - すべての武器を購入済みであること
-- discord を使用できる環境があること
+- リーダーはdiscord を使用できる環境があること
 
 ## 参加申し込みフォーム(2/18に上限チーム数に達したため締め切りました)
 
@@ -132,14 +122,15 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 3. 参加者2のゲーム内アカウント名
 4. 参加者3のゲーム内アカウント名
 5. 参加者4のゲーム内アカウント名
-6, 意気込み
+6. 除外したいステージを1つ指定してください
+7, 意気込み
 ```
 
 - 最小参加チーム数：4
 - 最大参加チーム数：8
 - ゲーム内アカウントとは任天堂アカウント名を指します
 - 一度出したものから変更することもできますので、その際は大会前日までにご連絡ください
-- 申込み期日は 2/17 
+- 申込み期日は 8/11 
 
 
 # ゲームの実施環境について
@@ -149,13 +140,7 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
 - odajun は常に観戦として参加します
 - odajun の観戦している様子を Youtube にて配信し、後日カット編集したものを niconico動画でも投稿予定
 - また、琴葉茜姉妹による音声つきの動画を編集し niconico動画、youtube にて投稿予定
-- 当日の進行状況、結果報告は Twitter, あるいは niconico 動画の配信にて確認できる
-
-# 事前準備テストについて
-
-任意ではありますが、大会の進行が特殊なので、チームの都合が良ければ、大会前に大会と同様の環境にて流れを確認する時間を設けたいと思います
-
-実施するタイミングはチームの皆さんと都合と odajun の都合のつくタイミングであればいつでも大丈夫です(参加申し込み後調整します)
+- 当日の進行状況、結果報告は Twitter, あるいは niconico 動画の配信にて確認できる状態にする予定
 
 
 # 主催者情報
