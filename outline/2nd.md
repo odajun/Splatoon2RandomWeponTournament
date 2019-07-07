@@ -156,6 +156,27 @@ NGの例：わかばシューター、もみじシューター、スパッタリ
   - A. 変更可能です。ただし、大会開始後は変更できません
 - Q. 大会指定の Discord のサーバ以外で通話しても良いですか？(LINEなど)
   - A. 問題ありませんが、武器やルール、ステージの指示がこちらの指定した Discord の text channel より通知されるため、この text channel は見れる状態でお願いします
+  
+# 参考(第1回大会のハイライト・生放送時の動画)
+
+## ニコニコ動画
+
+[前編](https://www.nicovideo.jp/watch/sm34750265)
+
+[後編](https://www.nicovideo.jp/watch/sm34750265)
+
+## Youtube
+
+[前編](https://www.youtube.com/watch?v=oZQfvf40sLo)
+
+[後編](https://www.youtube.com/watch?v=AbfhROvFPIk)
+
+# 大会配信アーカイブ(Youtube のみ)
+
+[1回戦1試合～1回戦4試合](https://www.youtube.com/watch?v=UxyMZlE7DRs)
+
+[2回戦1試合～決勝戦](https://www.youtube.com/watch?v=_ia-QlQ6v6w)
+
 
 
 >
